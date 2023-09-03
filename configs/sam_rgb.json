@@ -1,0 +1,17 @@
+{
+    "camera": {
+        "color": {
+            "image_topic": "/camera/color/image_raw",
+            "info_topic": "/camera/color/camera_info"
+        },
+        "depth": {
+            "image_topic": "/camera/aligned_depth_to_color/image_raw",
+            "info_topic": "/camera/aligned_depth_to_color/camera_info"
+        },
+        "response_timeout": 5
+    },
+    "pipeline": {
+        "model_type": "vit_h",
+        "model_path": "/root/workspaces/src/ros_uois/segment-anything/checkpoints/sam_vit_h_4b8939.pth"
+    }
+}

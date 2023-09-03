@@ -1,0 +1,38 @@
+{
+    "camera": {
+        "color": {
+            "image_topic": "/camera/color/image_raw",
+            "info_topic": "/camera/color/camera_info"
+        },
+        "depth": {
+            "image_topic": "/camera/aligned_depth_to_color/image_raw",
+            "info_topic": "/camera/aligned_depth_to_color/camera_info"
+        },
+        "response_timeout": 5
+    },
+    "pipeline": {
+        "padding_percentage": 0.25,
+        "use_open_close_morphology": true,
+        "open_close_morphology_ksize": 9,
+        "use_largest_connected_component": true,
+        "final_close_morphology": true,
+        "dsn_config": {
+            "feature_dim": 64,
+            "max_GMS_iters": 10,
+            "epsilon": 0.05,
+            "sigma": 0.02,
+            "num_seeds": 200,
+            "subsample_factor": 5,
+            "min_pixels_thresh": 500,
+            "tau": 15.0
+        },
+        "rrn_config": {
+            "feature_dim": 64,
+            "img_H": 224,
+            "img_W": 224,
+            "use_coordconv": false
+        },
+        "dsn_checkpoint_path": "/root/workspaces/src/ros_uois/uois/models/DepthSeedingNetwork_3D_TOD_checkpoint.pth",
+        "rrn_checkpoint_path": "/root/workspaces/src/ros_uois/uois/models/RRN_OID_checkpoint.pth"
+    }
+}

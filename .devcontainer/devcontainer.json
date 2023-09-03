@@ -1,0 +1,39 @@
+{
+    // "image": "uois/uois-cuda:latest",
+    // Uncomment to use Dockerfile build instead of pre-built image
+    "build": {
+        "dockerfile": "../.docker/uois-ros-realsense.Dockerfile",
+        "context": "..",
+        "args": {},
+        "target": "" //
+    },
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "QT_X11_NO_MITSHM": "1"
+    },
+    "runArgs": [
+        "--network=host",
+        "--volume=/tmp/.X11-unix/:/tmp/.X11-unix/",
+        "--device=/dev/dri:/dev/dri",
+        "--gpus",
+        "all",
+        "--privileged"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/root/workspaces/src/ros_uois,type=bind",
+    "workspaceFolder": "/root/workspaces",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "twxs.cmake",
+                "ms-vscode.cmake-tools",
+                "gruntfuggly.todo-tree",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "ms-python.python",
+                "njpwerner.autodocstring",
+                "ms-toolsai.jupyter",
+                "ms-python.black-formatter"
+            ]
+        }
+    }
+}

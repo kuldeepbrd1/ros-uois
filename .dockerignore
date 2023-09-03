@@ -1,0 +1,27 @@
+## Devcontainer
+.devcontainer/**
+
+## Docker
+**/*.Dockerfile
+.docker/*.sh
+.dockerignore
+
+## Git
+**/.git
+**/.gitignore
+**/checkpoints/**
+
+
+## VS Code
+.vscode/**
+**/.vscode/**
+
+## Python
+**/*.pyc
+**/__pycache__/**
+*.egg-info
+
+## Custom
+README.md
+configs
+img_cache

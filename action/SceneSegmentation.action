@@ -1,0 +1,8 @@
+#goal definition
+SegmentationRequest goal_request
+---
+#result definition
+SegmentationResult result
+---
+#feedback
+SegmentationState progress

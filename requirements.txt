@@ -1,0 +1,15 @@
+addict
+black
+einops==0.6.1
+ipykernel
+jupyter
+matplotlib==3.7.2
+numpy==1.24.4
+onnxruntime-gpu
+opencv-python
+pillow
+pre-commit
+pypng
+scikit-image
+torch==1.13.1 -e https://download.pytorch.org/whl/cu117
+torchvision==0.14.1 -e https://download.pytorch.org/whl/cu117

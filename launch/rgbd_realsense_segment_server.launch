@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Arguments -->
+    <arg name="filters" default="temporal,spatial,disparity"/>
+    <arg name="rs_config" default="/root/workspaces/src/ros_uois/configs/camera/rs-preset.json"/>
+    <arg name="config" default="/root/workspaces/src/ros_uois/configs/sam_query_rgb_onnx.json"/>
+
+    <!-- Launch the realsense camera -->
+    <include file="$(find realsense2_camera)/launch/rs_aligned_depth.launch">
+        <arg name="filters" default="$(arg filters)"/>
+        <arg name="json_file_path" default="$(arg rs_config)"/>
+        <arg name="enable_pointcloud" default="true"/>
+    </include>
+
+    <!-- Launch the segmentation server -->
+    <node name="rgbd_segmentation_server" pkg="ros_uois" type="rgbd_segmentation_server.py" output="screen"/>
+
+</launch>

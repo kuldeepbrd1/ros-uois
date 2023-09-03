@@ -1,0 +1,12 @@
+devel
+install
+logs
+.catkin_tools
+build
+
+*.pyc
+*/__pycache__/**
+
+**/img_cache/**
+*.crt
+*.egg-info

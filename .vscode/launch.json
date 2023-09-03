@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: UOIS process_rgbd_scene.py",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ros_uois/scripts/process_rgbd_scene.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "src/ros_uois/configs/uois_rgbd.json"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Python: SAM process_rgbd_scene.py",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ros_uois/scripts/process_rgbd_scene.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "src/ros_uois/configs/sam_rgb.json"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Python: SAM Query point process_rgbd_scene.py",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ros_uois/scripts/process_rgbd_scene.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--config",
+                "src/ros_uois/configs/sam_query_rgb.json"
+            ],
+            "justMyCode": false
+        }
+    ]
+}

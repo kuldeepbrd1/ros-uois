@@ -1,0 +1,6 @@
+[submodule "uois"]
+	path = uois
+	url = git@github.com:kuldeepbrd1/uois
+[submodule "segment-anything"]
+	path = segment-anything
+	url = https://github.com/facebookresearch/segment-anything
